@@ -4,7 +4,7 @@ from aiogram.filters import  CommandStart
 
 from loader import dp
 from keyboards.default import btn
-# from utils.set_bot_commands import set_default_commands
+
 
 
 

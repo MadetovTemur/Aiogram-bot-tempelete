@@ -1,17 +1,23 @@
-from aiogram import types, Bot, F
 import json
-
+from aiogram import types, Bot, F
+from filters import ContentTypeAnyFilter
+from aiogram.filters import Command
 
 from loader import dp
 from keyboards.inline import selective
+from keyboards.inline import info_inlayin
 
+
+@dp.message(Command('inlayin'))
+async def bot_inlayin(msg: types.Message):
+    await msg.answer("Inlayin button", reply_markup=info_inlayin())
 
 
 @dp.message(F.photo)
 async def get_photo(msg: types.Message, bot: Bot):
   await msg.answer("Siz rasim yubordingiz")
   file = await bot.get_file(msg.photo[-1].file_id) # type: ignore
-  # await bot.download_file(file.file_path, 'phot.jpg')
+  await bot.download_file(file.file_path, 'phot.jpg') # type: ignore
 
 
 @dp.message(F.text == 'json')
@@ -20,6 +26,6 @@ async def bot_salom(msg: types.Message):
   await msg.answer(to_msg, reply_markup=selective) # type: ignore
 
 
-@dp.message()
+@dp.message(ContentTypeAnyFilter('text'))
 async def bot_echo(msg: types.Message):
     await msg.answer(msg.text) # type: ignore

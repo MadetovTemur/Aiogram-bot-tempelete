@@ -1,0 +1,11 @@
+06.10.23 22:01:01 | 582 ms | aiogram.dispatcher   | start_polling | dispatcher | (524 - Start polling) (9424 MainProcess) | 6360
+06.10.23 22:01:01 | 153 ms | aiogram.dispatcher   | _polling | dispatcher | (340 - Run polling for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot') (9424 MainProcess) | 6360
+06.10.23 22:01:01 | 806 ms | aiogram.event   | feed_update | dispatcher | (171 - Update id=386115839 is handled. Duration 657 ms by bot id=6441125092) (9424 MainProcess) | 6360
+06.10.23 22:01:01 | 123 ms | aiogram.dispatcher   | start_polling | dispatcher | (551 - Polling stopped) (9424 MainProcess) | 6360
+06.10.23 22:01:01 | 123 ms | aiogram.dispatcher   | _polling | dispatcher | (356 - Polling stopped for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot') (9424 MainProcess) | 6360
+06.10.23 22:07:07 | 230 ms | aiogram.dispatcher| start_polling | dispatcher | (524 - Start polling) (6184 MainProcess) | 10560
+06.10.23 22:07:07 | 800 ms | aiogram.dispatcher| _polling | dispatcher | (340 - Run polling for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot') (6184 MainProcess) | 10560
+06.10.23 22:07:07 | 649 ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115840 is handled. Duration 625 ms by bot id=6441125092) (6184 MainProcess) | 10560
+06.10.23 22:07:07 | 39 ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115841 is handled. Duration 281 ms by bot id=6441125092) (6184 MainProcess) | 10560
+06.10.23 22:07:07 | 399 ms | aiogram.dispatcher| start_polling | dispatcher | (551 - Polling stopped) (6184 MainProcess) | 10560
+06.10.23 22:07:07 | 399 ms | aiogram.dispatcher| _polling | dispatcher | (356 - Polling stopped for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot') (6184 MainProcess) | 10560

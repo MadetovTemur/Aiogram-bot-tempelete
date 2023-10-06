@@ -1,25 +1,26 @@
-import logging, asyncio
-from aiogram import Bot
-from aiogram.enums import ParseMode
+import logging, asyncio, sys
 
-import config, filters, handlers, middlewares, utils
-from loader import dp
+import handlers, utils
+from loader import dp, bot
 
 
 
 
 async def start() -> None:
-  logging.basicConfig(level=logging.INFO)
+  global bot, dp
+  await utils.misc.bot_log()
 
-  bot = Bot(config.BOT_TOKEN, parse_mode=ParseMode.HTML, protect_content=True)
+  # await dp.startup(utils.notify_admins.on_startup_notify()) # type: ignore
+  # await dp.shutdown(utils.notify_admins.on_stop_notify()) # type: ignore
 
   try:
     await dp.start_polling(bot)
   except(Exception) as err:
-    logging.info(err)
-    exit()
+    logging.error(err)
+    sys.exit()
   finally:
-    await bot.session.close()
+    # await bot.session.close()
+    sys.exit()
 
 
 
