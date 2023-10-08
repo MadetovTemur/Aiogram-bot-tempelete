@@ -4,11 +4,11 @@ from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
 btn1 = ReplyKeyboardMarkup(keyboard=[
   [
-    KeyboardButton(text='Jaylashuv', request_location=True),
-    KeyboardButton(text='Kantakt', request_contact=True),
-    KeyboardButton(text='Viktorina', request_poll=KeyboardButtonPollType(type='quiz') )# reguliar
+    KeyboardButton(text='Локатьсия', request_location=True),
+    KeyboardButton(text='Контакь', request_contact=True),
+    KeyboardButton(text='Викторина', request_poll=KeyboardButtonPollType(type='quiz') )# reguliar
   ]
-], resize_keyboard=True, input_field_placeholder='Tugmalar', one_time_keyboard=False)
+], resize_keyboard=True, input_field_placeholder='Кнопкий', one_time_keyboard=False)
 
 
 def get_bilder():
@@ -20,6 +20,6 @@ def get_bilder():
   bild.button(text='2',request_chat=True)
 
   bild.adjust(1, 1, 2)
-  bild.as_markup(resize_keyboard=True, input_field_placeholder='Tugmalar', one_time_keyboard=False)
+  bild.as_markup(resize_keyboard=True, input_field_placeholder='Кнопкий', one_time_keyboard=False)
 
   return bild

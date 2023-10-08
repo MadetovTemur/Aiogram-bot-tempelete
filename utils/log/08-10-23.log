@@ -1,0 +1,399 @@
+08.10.23 12:29:33 | 588ms | aiogram.dispatcher| start_polling | dispatcher | (524 - Start polling) (1788 MainProcess) | 9192
+08.10.23 12:29:33 | 773ms | aiogram.dispatcher| _polling | dispatcher | (340 - Run polling for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot') (1788 MainProcess) | 9192
+08.10.23 12:29:33 | 491ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115891 is handled. Duration 6718 ms by bot id=6441125092) (1788 MainProcess) | 9192
+08.10.23 12:29:33 | 275ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115893 is handled. Duration 3702 ms by bot id=6441125092) (1788 MainProcess) | 9192
+08.10.23 12:29:33 | 109ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115894 is handled. Duration 4546 ms by bot id=6441125092) (1788 MainProcess) | 9192
+08.10.23 12:29:33 | 528ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115895 is handled. Duration 750 ms by bot id=6441125092) (1788 MainProcess) | 9192
+08.10.23 12:29:33 | 187ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115892 is handled. Duration 16343 ms by bot id=6441125092) (1788 MainProcess) | 9192
+08.10.23 12:29:33 | 634ms | aiogram.dispatcher| start_polling | dispatcher | (551 - Polling stopped) (1788 MainProcess) | 9192
+08.10.23 12:29:33 | 986ms | root| start | app | (20 - Finished to bot) (1788 MainProcess) | 9192
+08.10.23 12:29:33 | 381ms | aiogram.dispatcher| _listen_updates | dispatcher | (218 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 1] [SSL: APPLICATION_DATA_AFTER_CLOSE_NOTIFY] application data after close notify (_ssl.c:2672)) (1788 MainProcess) | 9192
+08.10.23 12:29:33 | 381ms | aiogram.dispatcher| _listen_updates | dispatcher | (220 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6441125092)) (1788 MainProcess) | 9192
+08.10.23 12:29:33 | 233ms | aiogram.dispatcher| _polling | dispatcher | (356 - Polling stopped for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot') (1788 MainProcess) | 9192
+08.10.23 12:35:20 | 30ms | aiogram.dispatcher| start_polling | dispatcher | (524 - Start polling) (8624 MainProcess) | 5460
+08.10.23 12:35:20 | 646ms | aiogram.dispatcher| _polling | dispatcher | (340 - Run polling for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot') (8624 MainProcess) | 5460
+08.10.23 12:35:20 | 760ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (8624 MainProcess) | 5460
+08.10.23 12:35:20 | 760ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (8624 MainProcess) | 5460
+08.10.23 12:35:20 | 929ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (8624 MainProcess) | 5460
+08.10.23 12:35:20 | 575ms | asyncio| default_exception_handler | base_events | (1765 - Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<ChatActionSender._worker() done, defined at C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\utils\chat_action.py:68> exception=TelegramNetworkError('HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]')>) (8624 MainProcess) | 5460
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\connector.py", line 980, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore[return-value]  # noqa
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 1106, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 1139, in _create_connection_transport
+    await waiter
+ConnectionAbortedError: SSL handshake is taking longer than 60.0 seconds: aborting the connection
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\client\session\aiohttp.py", line 167, in make_request
+    async with session.post(
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\connector.py", line 1178, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\connector.py", line 988, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\utils\chat_action.py", line 87, in _worker
+    await self.bot.send_chat_action(
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\client\bot.py", line 2266, in send_chat_action
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\client\bot.py", line 432, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\client\session\aiohttp.py", line 174, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+08.10.23 12:35:20 | 716ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115896 is not handled. Duration 60968 ms by bot id=6441125092) (8624 MainProcess) | 5460
+08.10.23 12:35:20 | 716ms | aiogram.event| _process_update | dispatcher | (314 - Cause exception while process update id=386115896 by bot id=6441125092
+TelegramNetworkError: HTTP Client says - Request timeout error) (8624 MainProcess) | 5460
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\client\session\aiohttp.py", line 167, in make_request
+    async with session.post(
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\client.py", line 467, in _request
+    with timer:
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\helpers.py", line 721, in __exit__
+    raise asyncio.TimeoutError from None
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 308, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\fsm\storage\memory.py", line 56, in lock
+    yield
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 42, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 275, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\middlewares\flag.py", line 20, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\middlewares\office.py", line 20, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\middlewares\counter.py", line 17, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 42, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\handlers\users\help.py", line 16, in bot_help
+    await msg.answer(to_msg)
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\client\bot.py", line 432, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\client\session\aiohttp.py", line 172, in make_request
+    raise TelegramNetworkError(method=method, message="Request timeout error")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - Request timeout error
+08.10.23 12:35:20 | 685ms | aiogram.dispatcher| start_polling | dispatcher | (551 - Polling stopped) (8624 MainProcess) | 5460
+08.10.23 12:35:20 | 208ms | aiogram.dispatcher| _polling | dispatcher | (356 - Polling stopped for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot') (8624 MainProcess) | 5460
+08.10.23 12:35:20 | 208ms | root| start | app | (20 - Finished to bot) (8624 MainProcess) | 5460
+08.10.23 12:35:20 | 809ms | asyncio| default_exception_handler | base_events | (1765 - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-1' coro=<start() done, defined at C:\Users\Lenovo\Desktop\Aiogram 3.0.0\app.py:8> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at C:\Program Files\Python311\Lib\asyncio\tasks.py:754]>) (8624 MainProcess) | 5460
+08.10.23 12:38:14 | 323ms | aiogram.dispatcher| start_polling | dispatcher | (524 - Start polling) (8636 MainProcess) | 9060
+08.10.23 12:38:14 | 44ms | aiogram.dispatcher| _polling | dispatcher | (340 - Run polling for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot') (8636 MainProcess) | 9060
+08.10.23 12:38:14 | 968ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (8636 MainProcess) | 9060
+08.10.23 12:38:14 | 968ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (8636 MainProcess) | 9060
+08.10.23 12:38:14 | 901ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (8636 MainProcess) | 9060
+08.10.23 12:38:14 | 902ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115897 is handled. Duration 2937 ms by bot id=6441125092) (8636 MainProcess) | 9060
+08.10.23 12:38:14 | 590ms | aiogram.dispatcher| _listen_updates | dispatcher | (218 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error) (8636 MainProcess) | 9060
+08.10.23 12:38:14 | 590ms | aiogram.dispatcher| _listen_updates | dispatcher | (220 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6441125092)) (8636 MainProcess) | 9060
+08.10.23 12:38:14 | 649ms | aiogram.dispatcher| start_polling | dispatcher | (551 - Polling stopped) (8636 MainProcess) | 9060
+08.10.23 12:38:14 | 451ms | root| on_stop_notify | notify_admins | (20 - HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Подключение к сети было разорвано локальной системой]) (8636 MainProcess) | 9060
+08.10.23 12:38:14 | 452ms | aiogram.dispatcher| _listen_updates | dispatcher | (218 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Подключение к сети было разорвано локальной системой]) (8636 MainProcess) | 9060
+08.10.23 12:38:14 | 452ms | aiogram.dispatcher| _listen_updates | dispatcher | (220 - Sleep for 1.293211 seconds and try again... (tryings = 1, bot id = 6441125092)) (8636 MainProcess) | 9060
+08.10.23 12:38:14 | 452ms | root| start | app | (20 - Finished to bot) (8636 MainProcess) | 9060
+08.10.23 12:38:14 | 456ms | aiogram.dispatcher| _polling | dispatcher | (356 - Polling stopped for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot') (8636 MainProcess) | 9060
+08.10.23 12:41:41 | 1ms | aiogram.dispatcher| start_polling | dispatcher | (524 - Start polling) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 161ms | aiogram.dispatcher| _polling | dispatcher | (340 - Run polling for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot') (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 411ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 411ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 411ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 411ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 244ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 244ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115898 is handled. Duration 828 ms by bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 360ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 360ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115899 is handled. Duration 953 ms by bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 127ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 127ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 448ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 448ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115900 is handled. Duration 312 ms by bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 31ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 32ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 355ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 355ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115901 is handled. Duration 328 ms by bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 758ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 759ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 12ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 12ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115902 is handled. Duration 250 ms by bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 560ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 560ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 888ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 888ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115903 is handled. Duration 328 ms by bot id=6441125092) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 322ms | aiogram.dispatcher| start_polling | dispatcher | (551 - Polling stopped) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 475ms | aiogram.dispatcher| _polling | dispatcher | (356 - Polling stopped for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot') (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 476ms | root| start | app | (20 - Finished to bot) (2728 MainProcess) | 1832
+08.10.23 12:41:41 | 906ms | asyncio| default_exception_handler | base_events | (1765 - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-1' coro=<start() done, defined at C:\Users\Lenovo\Desktop\Aiogram 3.0.0\app.py:8> wait_for=<_OverlappedFuture cancelled> cb=[gather.<locals>._done_callback() at C:\Program Files\Python311\Lib\asyncio\tasks.py:754]>) (2728 MainProcess) | 1832
+08.10.23 12:45:38 | 329ms | aiogram.dispatcher| start_polling | dispatcher | (524 - Start polling) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 499ms | aiogram.dispatcher| _polling | dispatcher | (340 - Run polling for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot') (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 339ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 355ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 45ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 46ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115904 is handled. Duration 702 ms by bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 967ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 968ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 835ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 835ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115905 is handled. Duration 875 ms by bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 576ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 577ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 883ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 884ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115906 is handled. Duration 312 ms by bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 743ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 743ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 31ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 32ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115907 is handled. Duration 296 ms by bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 401ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 402ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 623ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 623ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115908 is handled. Duration 218 ms by bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 813ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 813ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 457ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 458ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115909 is handled. Duration 639 ms by bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 477ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 477ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 737ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 738ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115910 is handled. Duration 264 ms by bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 259ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 259ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 456ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 457ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115911 is handled. Duration 202 ms by bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 501ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115912 is handled. Duration 172 ms by bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 20ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 22ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 234ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 234ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115913 is not handled. Duration 218 ms by bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 235ms | aiogram.event| _process_update | dispatcher | (314 - Cause exception while process update id=386115913 by bot id=6441125092
+TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 2] Can not write request body for https://api.telegram.org/bot6441125092:AAF2TC230WQQksH4Ehvfk2hHHWY-7G5aRl0/sendAudio) (11000 MainProcess) | 8976
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\client_reqrep.py", line 581, in write_bytes
+    await self.body.write(writer)
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\multipart.py", line 901, in write
+    await part.write(writer)
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\payload.py", line 443, in write
+    chunk = await self._iter.__anext__()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\types\input_file.py", line 103, in read
+    async with aiofiles.open(self.path, "rb") as f:
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiofiles\base.py", line 98, in __aenter__
+    self._obj = await self._coro
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiofiles\threadpool\__init__.py", line 97, in _open
+    f = yield from loop.run_in_executor(executor, cb)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'auio.mp3'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\client\session\aiohttp.py", line 167, in make_request
+    async with session.post(
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\client.py", line 560, in _request
+    await resp.start(conn)
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\client_reqrep.py", line 899, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiohttp\streams.py", line 616, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 2] Can not write request body for https://api.telegram.org/bot6441125092:AAF2TC230WQQksH4Ehvfk2hHHWY-7G5aRl0/sendAudio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 308, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\fsm\storage\memory.py", line 56, in lock
+    yield
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 42, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 275, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\utils\chat_action.py", line 356, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\middlewares\office.py", line 20, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\middlewares\counter.py", line 17, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 42, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\handlers\other\send_meda.py", line 14, in bot_aiodio
+    await msg.answer_audio(audio=audio)
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\client\bot.py", line 432, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Aiogram 3.0.0\.venvs\Lib\site-packages\aiogram\client\session\aiohttp.py", line 174, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 2] Can not write request body for https://api.telegram.org/bot6441125092:AAF2TC230WQQksH4Ehvfk2hHHWY-7G5aRl0/sendAudio
+08.10.23 12:45:38 | 267ms | aiogram.utils.chat_action| _worker | chat_action | (69 - Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 267ms | aiogram.utils.chat_action| _worker | chat_action | (80 - Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0)) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 100ms | aiogram.utils.chat_action| _worker | chat_action | (97 - Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 100ms | aiogram.event| feed_update | dispatcher | (171 - Update id=386115914 is handled. Duration 875 ms by bot id=6441125092) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 832ms | aiogram.dispatcher| start_polling | dispatcher | (551 - Polling stopped) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 483ms | root| start | app | (20 - Finished to bot) (11000 MainProcess) | 8976
+08.10.23 12:45:38 | 986ms | aiogram.dispatcher| _polling | dispatcher | (356 - Polling stopped for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot') (11000 MainProcess) | 8976
+08.10.23 12:51:43| 391mc|aiogram.dispatcher| start_polling|dispatcher|(524 - Start polling)|(6800 MainProcess)|8380
+08.10.23 12:51:43| 595mc|aiogram.dispatcher| _polling|dispatcher|(340 - Run polling for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot')|(6800 MainProcess)|8380
+08.10.23 12:51:43| 280mc|aiogram.dispatcher| start_polling|dispatcher|(551 - Polling stopped)|(6800 MainProcess)|8380
+08.10.23 12:51:43| 850mc|root| start|app|(20 - Finished to bot)|(6800 MainProcess)|8380
+08.10.23 12:51:43| 802mc|aiogram.dispatcher| _polling|dispatcher|(356 - Polling stopped for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot')|(6800 MainProcess)|8380
+08.10.23 12:51:43| 35mc|asyncio| default_exception_handler|base_events|(1765 - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000176532DB0D0>)|(6800 MainProcess)|8380
+08.10.23 12:51:43| 36mc|asyncio| default_exception_handler|base_events|(1765 - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x0000017653046270>, 80464.234)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000176532DA350>)|(6800 MainProcess)|8380
+08.10.23 12:59:29| 500mc|aiogram.dispatcher|start_polling|dispatcher|(524-Start polling)|(1648:MainProcess)|8496
+08.10.23 12:59:29| 703mc|aiogram.dispatcher|_polling|dispatcher|(340-Run polling for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot')|(1648:MainProcess)|8496
+08.10.23 12:59:29| 758mc|aiogram.utils.chat_action|_worker|chat_action|(69-Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092)|(1648:MainProcess)|8496
+08.10.23 12:59:29| 759mc|aiogram.utils.chat_action|_worker|chat_action|(80-Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0))|(1648:MainProcess)|8496
+08.10.23 12:59:29| 352mc|aiogram.utils.chat_action|_worker|chat_action|(97-Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092)|(1648:MainProcess)|8496
+08.10.23 12:59:29| 352mc|aiogram.event|feed_update|dispatcher|(171-Update id=386115915 is handled. Duration 593 ms by bot id=6441125092)|(1648:MainProcess)|8496
+08.10.23 12:59:29| 337mc|aiogram.dispatcher|start_polling|dispatcher|(551-Polling stopped)|(1648:MainProcess)|8496
+08.10.23 12:59:29| 962mc|root|start|app|(20-Finished to bot)|(1648:MainProcess)|8496
+08.10.23 12:59:29| 499mc|aiogram.dispatcher|_polling|dispatcher|(356-Polling stopped for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot')|(1648:MainProcess)|8496
+08.10.23 13:03:12| 320mc|aiogram.dispatcher|start_polling|dispatcher|(524-Start polling)|(9284:MainProcess)|9608
+08.10.23 13:03:12| 922mc|aiogram.dispatcher|_polling|dispatcher|(340-Run polling for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot')|(9284:MainProcess)|9608
+08.10.23 13:03:12| 421mc|aiogram.utils.chat_action|_worker|chat_action|(69-Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092)|(9284:MainProcess)|9608
+08.10.23 13:03:12| 422mc|aiogram.utils.chat_action|_worker|chat_action|(80-Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0))|(9284:MainProcess)|9608
+08.10.23 13:03:12| 221mc|aiogram.utils.chat_action|_worker|chat_action|(97-Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092)|(9284:MainProcess)|9608
+08.10.23 13:03:12| 221mc|aiogram.event|feed_update|dispatcher|(171-Update id=386115916 is handled. Duration 813 ms by bot id=6441125092)|(9284:MainProcess)|9608
+08.10.23 13:03:12| 25mc|aiogram.dispatcher|start_polling|dispatcher|(551-Polling stopped)|(9284:MainProcess)|9608
+08.10.23 13:03:12| 26mc|root|start|app|(20-Finished to bot)|(9284:MainProcess)|9608
+08.10.23 13:03:12| 806mc|aiogram.dispatcher|_polling|dispatcher|(356-Polling stopped for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot')|(9284:MainProcess)|9608
+08.10.23 13:04:42| 845mc|aiogram.dispatcher|start_polling|dispatcher|(524-Start polling)|(992:MainProcess)|8096
+08.10.23 13:04:42| 482mc|aiogram.dispatcher|_polling|dispatcher|(340-Run polling for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot')|(992:MainProcess)|8096
+08.10.23 13:04:42| 68mc|aiogram.utils.chat_action|_worker|chat_action|(69-Started chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092)|(992:MainProcess)|8096
+08.10.23 13:04:42| 68mc|aiogram.utils.chat_action|_worker|chat_action|(80-Sent chat action 'typing' to chat_id=5087883117 via bot 6441125092 (already sent actions 0))|(992:MainProcess)|8096
+08.10.23 13:04:42| 32mc|aiogram.utils.chat_action|_worker|chat_action|(97-Finished chat action 'typing' sender in chat_id=5087883117 via bot id=6441125092)|(992:MainProcess)|8096
+08.10.23 13:04:42| 33mc|aiogram.event|feed_update|dispatcher|(171-Update id=386115917 is handled. Duration 967 ms by bot id=6441125092)|(992:MainProcess)|8096
+08.10.23 13:04:42| 465mc|aiogram.dispatcher|start_polling|dispatcher|(551-Polling stopped)|(992:MainProcess)|8096
+08.10.23 13:04:42| 467mc|root|start|app|(20-Finished to bot)|(992:MainProcess)|8096
+08.10.23 13:04:42| 62mc|aiogram.dispatcher|_polling|dispatcher|(356-Polling stopped for bot @you_tube_dowinload_bot id=6441125092 - 'You Tube Bot')|(992:MainProcess)|8096

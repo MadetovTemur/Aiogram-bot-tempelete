@@ -1,23 +1,20 @@
+import sys
 from aiogram import types
 from aiogram.filters import Command
 
 
-from loader import dp
+from loader import dp, txt
+from config import BOT_COMMADNS
 
 
-
-@dp.message(Command('help'))
-async def bot_help(msg: types.Message):
-    text = ("Qanday yordam kerak?",
-            "Buyruqlar: ",
-            "/start - Botni ishga tushirish",
-            "/help - Yordam",
-            "/payment - payment",
-            "/inlayin - inlayin")
-
-    await msg.answer("\n".join(text))
+@dp.message(Command('help'), flags={'chat_action': "typing"})
+async def bot_help(msg: types.Message, counter: str):
+  to_msg = ""
+  for commands in BOT_COMMADNS['uz']:
+    to_msg += f"/{txt.bold(commands[0])} -- {commands[1]} \n"
+  await msg.answer(to_msg)
 
 
-# @dp.message()
-# async def bot_contact( msg: types.Message):
-#     await msg.answer("Kantakt")
+@dp.message(Command('count'))
+async def bot_count(msg: types.Message, counter: str):
+  await msg.answer(f"{counter}")

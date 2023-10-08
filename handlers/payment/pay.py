@@ -7,27 +7,27 @@ from aiogram.enums.currency import Currency
 from filters import ContentTypeAnyFilter
 
 
-# @dp.message(Command('payment'))
+@dp.message(Command('payment'))
 async def order(msg: Message):
   # 1111 1111 1111 1026  12/22  cvc 000
   await bot.send_invoice(
     chat_id=msg.chat.id,
-    title='Buy',
-    description='python telegram bot',
-    payload='payment sistem',
+    title='Загаловка',
+    description='Информатсия',
+    payload='Секретниы Информатсия',
     provider_token=config.PAYMENT_TOKEN,
     currency=Currency.UZS,
     prices=[
       LabeledPrice(
-        label='Mavhiy soz',
+        label='ИНН Оплата',
         amount=0
       ),
       LabeledPrice(
-        label='MCHJ',
+        label='MCHJ Оплата',
         amount=0
       ),
       LabeledPrice(
-        label='MHJ',
+        label='MHJ Оплата',
         amount=50000
       )
     ],
@@ -35,10 +35,10 @@ async def order(msg: Message):
     suggested_tip_amounts=[100000, 200000, 300000],
     # start_parameter='googlecom',
     provider_data=None,
-    photo_url='https://i.ibb.co/zGw5X0B/image.jpg',
-    photo_height=450,
-    photo_size=100,
-    photo_width=800,
+    # photo_url='URl',
+    # photo_height=450,
+    # photo_size=100,
+    # photo_width=800,
     need_name=True,
     need_phone_number=True,
     need_email=True,
@@ -56,24 +56,15 @@ async def order(msg: Message):
 
 @dp.pre_checkout_query()
 async def pre_chekout_query(pre: PreCheckoutQuery):
-  print(pre.dict(), end='\n\n')
+  # print(pre.dict(), end='\n\n')
   await bot.answer_pre_checkout_query(pre.id, ok=True)
   # await bot.answer_pre_checkout_query(pre.id, ok=False, error_message='Tolov otmadi')
 
 
-# @dp.message(filters=)
 async def seccessful_pay(msg: Message):
-  to_msg = f'xaridingiz uchun raxmat {str(msg.successful_payment.total_amount)}' # type: ignore
+  to_msg = f'Спасиба за покупка {str(msg.successful_payment.total_amount)}' # type: ignore
   await msg.answer(to_msg)
   # await msg.answer(msg)
-
-
-
-
-
-
-
-
 
 
 

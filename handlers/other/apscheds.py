@@ -19,4 +19,4 @@ scheduler.add_job(send_message_start, trigger='date', run_date=datetime.now() + 
 #                   kwargs={'id' : 5087883117})
 
 scheduler.add_job(send_message_start, trigger='interval', seconds=20, kwargs={'id':5087883117})
-scheduler.start()
+# scheduler.start()

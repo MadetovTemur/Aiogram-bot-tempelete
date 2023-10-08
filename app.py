@@ -1,17 +1,15 @@
 import logging, asyncio, sys
-
-import handlers, utils
+from aiogram import types
 from loader import dp, bot
 
 
 
 
 async def start() -> None:
+  import middlewares, handlers, utils
   global bot, dp
   await utils.misc.bot_log()
 
-  # await dp.startup(utils.notify_admins.on_startup_notify()) # type: ignore
-  # await dp.shutdown(utils.notify_admins.on_stop_notify()) # type: ignore
 
   try:
     await dp.start_polling(bot)
@@ -19,8 +17,10 @@ async def start() -> None:
     logging.error(err)
     sys.exit()
   finally:
-    # await bot.session.close()
+    logging.info('Finished to bot')
+    await bot.delete_my_commands(scope=types.BotCommandScopeDefault())
     sys.exit()
+
 
 
 
